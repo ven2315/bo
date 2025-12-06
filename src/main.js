@@ -1,0 +1,54 @@
+import './style.css'
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Intersection Observer for Fade-in animations
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, observerOptions);
+
+    const fadeElements = document.querySelectorAll('.fade-in');
+    fadeElements.forEach(el => observer.observe(el));
+
+    // Mobile Menu Toggle (Basic implementation)
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    // Note: For a full implementation, we would toggle a class on the nav
+    // and add styles for the mobile menu overlay.
+    // For now, let's just log it or add a simple toggle if we had the CSS ready.
+
+    if (menuBtn) {
+        menuBtn.addEventListener('click', () => {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+
+            // Optional: Animate hamburger icon
+            menuBtn.classList.toggle('active');
+        });
+    }
+
+    // Smooth Scroll for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});

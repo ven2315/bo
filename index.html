@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cafe Serenity - 都会の喧騒を忘れる場所</title>
+  <meta name="description" content="こだわりのコーヒーと自家製スイーツで、ゆったりとした時間をお過ごしください。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <header class="header">
+      <div class="container header-inner">
+        <a href="#" class="logo">Cafe Serenity</a>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#access">Access</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-menu-btn" aria-label="メニューを開く">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero-content fade-in">
+          <h1 class="hero-title">一杯のコーヒーで、<br>心ほどける時間を。</h1>
+          <p class="hero-subtitle">Your daily escape in the city.</p>
+        </div>
+        <div class="scroll-indicator">
+          <span>Scroll</span>
+          <div class="line"></div>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="container">
+          <div class="section-header fade-in">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-desc">私たちについて</p>
+          </div>
+          <div class="about-content">
+            <div class="about-image fade-in">
+              <img src="/images/about.png" alt="Cafe Atmosphere">
+            </div>
+            <div class="about-text fade-in">
+              <p>
+                Cafe Serenityは、忙しい日常から少し離れて、<br>
+                自分自身と向き合うための場所です。
+              </p>
+              <p>
+                厳選された豆を使用したハンドドリップコーヒーと、<br>
+                季節の素材を活かした自家製スイーツ。<br>
+                そして、心地よい音楽と温かな空間。
+              </p>
+              <p>
+                あなたの特別な「サードプレイス」になれますように。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu" class="section menu">
+        <div class="container">
+          <div class="section-header fade-in">
+            <h2 class="section-title">Menu</h2>
+            <p class="section-desc">おすすめメニュー</p>
+          </div>
+          <div class="menu-grid">
+            <!-- Menu items will be populated here -->
+            <div class="menu-item fade-in">
+              <div class="menu-image">
+                <img src="/images/menu-coffee.png" alt="本日のドリップコーヒー">
+              </div>
+              <div class="menu-content">
+                <div class="menu-info">
+                  <h3 class="menu-name">本日のドリップコーヒー</h3>
+                  <p class="menu-price">¥550</p>
+                </div>
+                <p class="menu-detail">バリスタがその日の気分に合わせて選んだ豆を使用。</p>
+              </div>
+            </div>
+            <div class="menu-item fade-in">
+              <div class="menu-image">
+                <img src="/images/menu-cheesecake.png" alt="自家製チーズケーキ">
+              </div>
+              <div class="menu-content">
+                <div class="menu-info">
+                  <h3 class="menu-name">自家製チーズケーキ</h3>
+                  <p class="menu-price">¥600</p>
+                </div>
+                <p class="menu-detail">濃厚ながらも後味さっぱり。コーヒーとの相性抜群です。</p>
+              </div>
+            </div>
+            <div class="menu-item fade-in">
+              <div class="menu-image">
+                <img src="/images/menu-sandwich.png" alt="季節のフルーツサンド">
+              </div>
+              <div class="menu-content">
+                <div class="menu-info">
+                  <h3 class="menu-name">季節のフルーツサンド</h3>
+                  <p class="menu-price">¥750</p>
+                </div>
+                <p class="menu-detail">旬のフルーツを贅沢に使用した、見た目も鮮やかな一品。</p>
+              </div>
+            </div>
+          </div>
+          <div class="menu-more fade-in">
+            <a href="#" class="btn">View All Menu</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section gallery">
+        <div class="container">
+          <div class="section-header fade-in">
+            <h2 class="section-title">Gallery</h2>
+            <p class="section-desc">店内の雰囲気</p>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-item fade-in"><img src="/images/gallery-1.png" alt="Interior 1"></div>
+            <div class="gallery-item fade-in"><img src="/images/gallery-2.png" alt="Interior 2"></div>
+            <div class="gallery-item fade-in"><img src="/images/gallery-3.png" alt="Interior 3"></div>
+            <div class="gallery-item fade-in"><img src="/images/gallery-4.png" alt="Interior 4"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="access" class="section access">
+        <div class="container">
+          <div class="section-header fade-in">
+            <h2 class="section-title">Access</h2>
+            <p class="section-desc">アクセス</p>
+          </div>
+          <div class="access-content fade-in">
+            <div class="access-info">
+              <p>〒100-0000<br>東京都渋谷区神宮前X-X-X</p>
+              <p>OPEN: 10:00 - 20:00 (L.O. 19:30)</p>
+              <p>CLOSE: Wednesday</p>
+              <p>TEL: 03-XXXX-XXXX</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="copyright">&copy; 2024 Cafe Serenity. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
