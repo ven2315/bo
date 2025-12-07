@@ -157,7 +157,7 @@ h3 {
     text-align: center;
     position: relative;
     padding-top: 60px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/hero-bg.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/bo/images/hero-bg.png');
     background-size: cover;
     background-position: center;
     color: var(--color-white);
