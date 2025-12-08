@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Intersection Observer for Fade-in animations
     const observerOptions = {
         root: null,
-        rootMargin: '0px',
+        rootMargin: '0px 0px -100px 0px', // Trigger slightly before the element is fully in view
         threshold: 0.1
     };
 
@@ -16,6 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, observerOptions);
+
+    // Parallax Effect for Hero Section
+    window.addEventListener('scroll', () => {
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            const scrolled = window.scrollY;
+            // Move background at half speed
+            hero.style.backgroundPositionY = `calc(50% + ${scrolled * 0.5}px)`;
+        }
+    });
 
     const fadeElements = document.querySelectorAll('.fade-in');
     fadeElements.forEach(el => observer.observe(el));
@@ -45,8 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
+                const headerOffset = 80; // Approximate header height
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
                 });
             }
         });
